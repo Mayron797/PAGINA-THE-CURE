@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cure | Registro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/IMAGENES/ICONO_FINAL.jpg">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url("/IMAGENES/callejon.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Capa oscura semitransparente encima del fondo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* ==== MENÚ ==== */
+    header {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-family: 'Metal Mania', cursive;
+      color: white;
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #fa0606;
+    }
+
+    /* ==== FORMULARIO ==== */
+    .registro-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      width: 90%;
+      max-width: 420px;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-family: 'Metal Mania', cursive;
+      color: #fa0606;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #ffeded;
+    }
+
+    input, textarea {
+      margin-bottom: 1.2rem;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    }
+
+    button {
+      background: #fa0606;
+      color: #fff;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: 'Metal Mania', cursive;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #c70404;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    }
+
+    .mensaje {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    /* === MENSAJE DE CONFIRMACIÓN === */
+    #exito {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s ease;
+    }
+
+    #exito:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .mensaje-exito {
+      background: rgba(255, 0, 0, 0.8);
+      padding: 2rem 3rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    }
+
+    .mensaje-exito h2 {
+      font-family: 'Metal Mania', cursive;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .mensaje-exito a {
+      color: #fff;
+      text-decoration: none;
+      background: #111;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    .mensaje-exito a:hover {
+      background: #fa0606;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==== MENÚ PRINCIPAL ==== -->
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+        <li><a href="Galeria.html">Galería</a></li>
+        <li><a href="Discografia.html">Discografía</a></li> 
+        <li><a href="shows.html">Shows</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="Comprar.html">Comprar</a></li>
+        <li><a href="registrarse.html">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==== FORMULARIO ==== -->
+  <div class="registro-container">
+    <h1>Regístrate</h1>
+
+    <form action="#exito">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="tucorreo@email.com" required>
+
+      <label for="pais">País</label>
+      <input type="text" id="pais" name="pais" placeholder="Tu país">
+
+      <label for="comentario">¿Por qué te gusta The Cure?</label>
+      <textarea id="comentario" name="comentario" rows="3" placeholder="Escribe tu respuesta..."></textarea>
+
+      <button type="submit">Registrarme</button>
+
+      <p class="mensaje">Al registrarte aceptas recibir noticias y actualizaciones sobre la banda.</p>
+    </form>
+  </div>
+
+  <!-- ==== MENSAJE DE ÉXITO ==== -->
+  <div id="exito">
+    <div class="mensaje-exito">
+      <h2>¡Registro exitoso!</h2>
+      <p>Gracias por unirte a nuestra comunidad de fans de <strong>The Cure</strong>.</p>
+      <a href="registrarse.html">Cerrar</a>
+    </div>
+  </div>
+</body>
+</html>

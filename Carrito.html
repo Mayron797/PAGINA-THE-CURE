@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | The Cure Store</title>
+    <link rel="stylesheet" href="/CSS/estiloCure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/IMAGENES/ICONO_FINAL.jpg">
+</head>
+
+<body>
+
+<div class="background-image"></div>
+<div class="blur-overlay"></div>
+
+<header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Biografia.html">Biografia</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
+            <li><a href="Discografia.html">Discografia</a></li> 
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="Comprar.html">Comprar</a></li>
+            <li><a href="registrarse.html">Registrarse</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="carrito-section">
+    <h1 class="titulo-carrito">🖤 Tu Carrito</h1>
+
+    <div class="producto-carrito">
+        <img src="/IMAGENES/Camisa.avif" alt="Camiseta">
+        <div class="info-carrito">
+            <h3>Camiseta The Cure - Boys Don't Cry</h3>
+            <p class="precio">$45.000 COP</p>
+            <div class="cantidad">
+                <span class="menos">-</span>
+                <p>1</p>
+                <span class="mas">+</span>
+            </div>
+        </div>
+        <button class="eliminar">X</button>
+    </div>
+
+    <div class="producto-carrito">
+        <img src="/IMAGENES/DesintegrationVinilo.jpg" alt="Vinilo">
+        <div class="info-carrito">
+            <h3>Vinilo The Cure - Desintegration</h3>
+            <p class="precio">$157.000 COP</p>
+            <div class="cantidad">
+                <span class="menos">-</span>
+                <p>1</p>
+                <span class="mas">+</span>
+            </div>
+        </div>
+        <button class="eliminar">X</button>
+    </div>
+
+    <div class="producto-carrito">
+        <img src="/IMAGENES/FUNKOsm.jpg" alt="Funko">
+        <div class="info-carrito">
+            <h3>Funko Pop - Robert Smith</h3>
+            <p class="precio">$120.000 COP</p>
+            <div class="cantidad">
+                <span class="menos">-</span>
+                <p>1</p>
+                <span class="mas">+</span>
+            </div>
+        </div>
+        <button class="eliminar">X</button>
+    </div>
+
+    <div class="total-carrito">
+        <p><strong>Total: </strong>$322.000 COP</p>
+        <a href="#pago" class="btn-pagar">Pagar</a>
+    </div>
+</section>
+
+<!-- 💳 MODAL PAGO -->
+<div class="pago-container" id="pago">
+    <div class="pago-card">
+        <h2>💳 Datos de Pago</h2>
+
+        <form action="#ok" method="get" class="form-pago">
+            <input type="text" placeholder="Nombre Completo" required>
+            <input type="number" placeholder="Número de Tarjeta" required>
+            <input type="text" placeholder="MM/AA" required pattern="[0-9]{2}/[0-9]{2}">
+            <input type="number" placeholder="CVV" required>
+
+            <button type="submit" class="btn-pagar">Confirmar Pago</button>
+        </form>
+
+        <a href="#" class="cerrar">Cerrar</a>
+    </div>
+</div>
+
+<!-- ✔ MENSAJE DE PAGO EXITOSO -->
+<div class="pago-container" id="ok">
+    <div class="pago-card">
+        <h2>✔ Pago exitoso</h2>
+        <p>Gracias por tu compra 🖤</p>
+        <a href="index.html" class="btn-pagar">Volver al inicio</a>
+        <a href="#" class="cerrar">Cerrar</a>
+    </div>
+</div>
+
+
+</body>
+</html>
